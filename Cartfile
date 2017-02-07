@@ -1,0 +1,9 @@
+github "Alamofire/Alamofire"
+github "Hearst-DD/ObjectMapper" ~> 2.0
+github "tristanhimmelman/AlamofireObjectMapper" "swift-3"
+github "realm/realm-cocoa"
+github "xmartlabs/Eureka" ~> 2.0
+github "Alamofire/AlamofireImage" ~> 3.0
+github "Alamofire/AlamofireNetworkActivityIndicator" ~> 2.0
+github "WenchaoD/FSCalendar"
+github "mxcl/PromiseKit" ~> 4.0

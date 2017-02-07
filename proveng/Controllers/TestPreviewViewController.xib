@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestPreviewViewController" customModule="proveng" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="ZDm-pH-vKE" id="HLO-Xm-ODp"/>
+                <outlet property="imageViewHeight" destination="9e4-O8-Iye" id="kxy-cA-IhL"/>
+                <outlet property="startTestButton" destination="hfU-k7-r2n" id="c5r-Xg-fwG"/>
+                <outlet property="textLabel" destination="j7C-RU-ITZ" id="EK4-qk-XqH"/>
+                <outlet property="textView" destination="5Xh-EF-oR7" id="wZF-23-omK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7C-RU-ITZ">
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="282" id="5Bb-KI-P6j"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHU-u6-ojb">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfU-k7-r2n" customClass="BaseButton" customModule="proveng" customModuleProvider="target">
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="81n-Me-3eM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="startTestButtonPressed:" destination="-1" eventType="touchUpInside" id="4l2-sJ-CDh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="73" id="4HG-6J-Vmh"/>
+                        <constraint firstItem="hfU-k7-r2n" firstAttribute="centerY" secondItem="mHU-u6-ojb" secondAttribute="centerY" constant="-13" id="6QC-5y-Frq"/>
+                        <constraint firstItem="hfU-k7-r2n" firstAttribute="centerX" secondItem="mHU-u6-ojb" secondAttribute="centerX" constant="1.5" id="8IE-oR-8ac"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start_test" translatesAutoresizingMaskIntoConstraints="NO" id="ZDm-pH-vKE">
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="236" id="9e4-O8-Iye"/>
+                        <constraint firstAttribute="width" secondItem="ZDm-pH-vKE" secondAttribute="height" multiplier="1:1" id="vFe-zk-2by"/>
+                    </constraints>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xh-EF-oR7">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="282" id="NGV-fs-2qM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="j7C-RU-ITZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="6YH-yv-bNC"/>
+                <constraint firstAttribute="bottom" secondItem="mHU-u6-ojb" secondAttribute="bottom" id="7rd-gI-JMo"/>
+                <constraint firstItem="ZDm-pH-vKE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9xi-za-aEv"/>
+                <constraint firstAttribute="trailing" secondItem="j7C-RU-ITZ" secondAttribute="trailing" constant="8" id="D6g-nx-Q3h"/>
+                <constraint firstItem="j7C-RU-ITZ" firstAttribute="top" secondItem="ZDm-pH-vKE" secondAttribute="bottom" id="DqN-gG-GNr"/>
+                <constraint firstItem="mHU-u6-ojb" firstAttribute="top" secondItem="5Xh-EF-oR7" secondAttribute="bottom" constant="12" id="Gsi-Wt-BPH"/>
+                <constraint firstAttribute="trailing" secondItem="5Xh-EF-oR7" secondAttribute="trailing" constant="8" id="LKp-cL-jIZ"/>
+                <constraint firstItem="hfU-k7-r2n" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="10:23" id="M8w-XH-oYv"/>
+                <constraint firstItem="mHU-u6-ojb" firstAttribute="top" relation="lessThanOrEqual" secondItem="j7C-RU-ITZ" secondAttribute="bottom" constant="12" id="RRF-do-cpB"/>
+                <constraint firstItem="ZDm-pH-vKE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="hVm-KI-smk"/>
+                <constraint firstAttribute="trailing" secondItem="mHU-u6-ojb" secondAttribute="trailing" id="nJe-JV-dB8"/>
+                <constraint firstItem="5Xh-EF-oR7" firstAttribute="top" secondItem="ZDm-pH-vKE" secondAttribute="bottom" id="r86-QE-55m"/>
+                <constraint firstItem="5Xh-EF-oR7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="tQb-h3-zhl"/>
+                <constraint firstItem="mHU-u6-ojb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vKF-6w-ypf"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Gsi-Wt-BPH"/>
+                    <exclude reference="RRF-do-cpB"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="start_test" width="236" height="236"/>
+    </resources>
+</document>

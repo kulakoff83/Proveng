@@ -1,0 +1,103 @@
+//
+//  StudentMaterialsViewController.swift
+//  proveng
+//
+//  Created by Dmitry Kulakov on 26.08.16.
+//  Copyright © 2016 Provectus. All rights reserved.
+//
+
+import UIKit
+import Eureka
+import ObjectMapper
+import PromiseKit
+
+class StudentMaterialsViewController: BaseFormViewController {
+    
+    var isChild = true
+    var servise = ServiceForTestAndMaterials.sharedInstance
+    var materials: [Material]!
+    var tests: [TestPreview]!
+
+    fileprivate let apiLayer = ApiLayer.SharedApiLayer
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        materials = servise.getMaterials()
+        tests = servise.getTests()
+        self.configureTestMaterialsForm()
+        self.addTestSections()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if isChild {
+            self.navigationController?.setNavigationBarHidden(true, animated: false)
+            self.createBaseNavigationBar()
+        }
+    }
+
+    func configureTestMaterialsForm() {
+        form +++ Section()
+            <<< SegmentedRow<String>("Segments"){
+                $0.options = ["Test", "Materials"]
+                $0.value = "Test"
+                $0.onChange { row in
+                    self.updateCell()
+                }
+        }
+    }
+    
+    func updateCell(){
+        self.form.removeSubrange(1...form.allSections.count)
+        if self.form.rowBy(tag: "Segments")!.baseValue as! String == "Test" {
+            self.addTestSections()
+        } else {
+            self.addMaterialsSections()
+        }
+        tableView?.reloadData()
+    }
+    
+    func addTestSections() {
+        form +++ Section(){
+            $0.tag = "Test"
+        }
+        for test in tests {
+            let testIndex = tests.index(of: test)!
+            form.last! <<< TestRow("Test\(testIndex)") {
+                $0.cell.configureTestCell(test)
+                $0.onCellSelection({ (cell, row) in
+                    firstly{
+                        ServiceForData<Test>().getDataFromStoragePromise(21 as AnyObject)
+                    }.then{ test -> Void in
+                        
+                        let operation = RouterOperationXib.openTest(test: test)
+                        self.router.performOperation(operation)
+                    }.catch{ error in
+                        print(error)//What we do with error
+                    }
+                })
+            }
+        }
+
+    }
+    
+    func addMaterialsSections() {
+        form +++ Section(){
+            $0.tag = "Materials"
+            }
+        for material in materials {
+            let materialIndex = materials.index(of: material)!
+            form.last! <<< ButtonPushRow("Material\(materialIndex)") {
+                $0.title = material.name
+                $0.onCellSelection({ (cell, row) in
+                    let operation = RouterOperationXib.openMaterialsScreen(material: material)
+                    self.router.performOperation(operation)
+                })
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "China, Tower",
+      "place": "China, Tower",
+      "roominess": 15
+    },
+    {
+      "id": 2,
+      "name": "San Diego, USA",
+      "place": "San Diego, USA",
+      "roominess": 8
+    },
+    {
+      "id": 3,
+      "name": "Chicago, USA",
+      "place": "Chicago, USA",
+      "roominess": 8
+    },
+    {
+      "id": 4,
+      "name": "Oxford, UK",
+      "place": "Oxford, UK",
+      "roominess": 6
+    },
+    {
+      "id": 5,
+      "name": "Cardiff, UK",
+      "place": "Cardiff, UK",
+      "roominess": 6
+    },
+    {
+      "id": 6,
+      "name": "Cambridge, UK",
+      "place": "Cambrige, UK",
+      "roominess": 6
+    }
+  ]

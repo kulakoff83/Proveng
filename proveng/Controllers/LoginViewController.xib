@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="proveng" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="0Ah-3v-yVb" id="yAy-At-Ye5"/>
+                <outlet property="rulesLabel" destination="v3Z-sy-Jsn" id="T8u-ac-aaF"/>
+                <outlet property="rulesLabelTopConstraint" destination="Nbj-zn-WFY" id="Boq-iP-vdt"/>
+                <outlet property="view" destination="iN0-l3-epB" id="mdy-Jl-cXg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign_in_bg" translatesAutoresizingMaskIntoConstraints="NO" id="toJ-ct-Mbs"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROVENG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skv-fh-MsS">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="djk-X1-NOe"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="253" id="e2q-Zv-0vD"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="iHp-Wf-AjJ"/>
+                        <constraint firstAttribute="width" constant="253" id="owv-Yt-s0K"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ah-3v-yVb" customClass="BaseButton" customModule="proveng" customModuleProvider="target">
+                    <color key="backgroundColor" red="0.56000000238418579" green="0.56000000238418579" blue="0.56000000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="6J3-oW-ZKO"/>
+                        <constraint firstAttribute="width" constant="280" id="EIl-7l-H6L"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Sign In">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="loginUserButtonPressed:" destination="-1" eventType="touchUpInside" id="Gmv-Xf-M1b"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign_in" translatesAutoresizingMaskIntoConstraints="NO" id="lC3-09-jSM">
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="lC3-09-jSM" secondAttribute="height" multiplier="1:1" id="OJD-vL-Uml"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing in, you agree to Proveng Terms of Service and Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3Z-sy-Jsn">
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="159" id="53o-ED-LhG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.58039215686274503" green="0.62352941176470589" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="skv-fh-MsS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8GR-PF-ErW"/>
+                <constraint firstItem="lC3-09-jSM" firstAttribute="centerX" secondItem="skv-fh-MsS" secondAttribute="centerX" id="AFZ-QY-X1a"/>
+                <constraint firstItem="0Ah-3v-yVb" firstAttribute="top" secondItem="lC3-09-jSM" secondAttribute="bottom" constant="45" id="Awn-Ds-HeJ"/>
+                <constraint firstItem="toJ-ct-Mbs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BLF-8z-iPZ"/>
+                <constraint firstItem="0Ah-3v-yVb" firstAttribute="centerX" secondItem="skv-fh-MsS" secondAttribute="centerX" id="HLg-zl-Py2"/>
+                <constraint firstItem="v3Z-sy-Jsn" firstAttribute="top" secondItem="0Ah-3v-yVb" secondAttribute="bottom" constant="72" id="Nbj-zn-WFY"/>
+                <constraint firstItem="v3Z-sy-Jsn" firstAttribute="centerX" secondItem="0Ah-3v-yVb" secondAttribute="centerX" id="OmH-t0-dgP"/>
+                <constraint firstItem="lC3-09-jSM" firstAttribute="width" secondItem="toJ-ct-Mbs" secondAttribute="height" multiplier="236:667" id="Que-kE-MT5"/>
+                <constraint firstItem="0Ah-3v-yVb" firstAttribute="width" secondItem="toJ-ct-Mbs" secondAttribute="height" multiplier="280:667" id="WRY-hG-494"/>
+                <constraint firstItem="toJ-ct-Mbs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Wia-mL-Xs3"/>
+                <constraint firstAttribute="bottom" secondItem="toJ-ct-Mbs" secondAttribute="bottom" id="fDb-Uh-ohM"/>
+                <constraint firstAttribute="trailing" secondItem="toJ-ct-Mbs" secondAttribute="trailing" id="fUX-wq-cfB"/>
+                <constraint firstItem="skv-fh-MsS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="82" id="h5g-Ty-KV7"/>
+                <constraint firstItem="v3Z-sy-Jsn" firstAttribute="width" secondItem="0Ah-3v-yVb" secondAttribute="width" constant="20" id="mfz-6i-OgB"/>
+                <constraint firstItem="lC3-09-jSM" firstAttribute="top" secondItem="skv-fh-MsS" secondAttribute="bottom" constant="29" id="tNQ-Sk-Zwa"/>
+                <constraint firstAttribute="bottom" secondItem="v3Z-sy-Jsn" secondAttribute="bottom" constant="10" id="uFa-aQ-pMS"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="105.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="sign_in" width="236" height="236"/>
+        <image name="sign_in_bg" width="375" height="667"/>
+    </resources>
+</document>

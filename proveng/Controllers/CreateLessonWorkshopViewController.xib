@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateLessonWorkshopViewController" customModule="proveng" customModuleProvider="target">
+            <connections>
+                <outlet property="eventSegment" destination="R9n-v7-kAd" id="U1u-Dj-tKo"/>
+                <outlet property="segmentImageView" destination="Rql-Os-yE2" id="fOV-bI-egg"/>
+                <outlet property="segmentView" destination="2NK-cH-pwW" id="51P-bd-qvD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2NK-cH-pwW">
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="R9n-v7-kAd" customClass="BaseSegmentedControl" customModule="proveng" customModuleProvider="target">
+                            <segments>
+                                <segment title="Lesson"/>
+                                <segment title="Workshop"/>
+                            </segments>
+                            <connections>
+                                <action selector="updateCell:" destination="-1" eventType="valueChanged" id="JlQ-dE-jbc"/>
+                            </connections>
+                        </segmentedControl>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rql-Os-yE2">
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="qDk-hJ-1u3"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="R9n-v7-kAd" secondAttribute="trailing" constant="11" id="1m7-zi-lc9"/>
+                        <constraint firstAttribute="trailing" secondItem="Rql-Os-yE2" secondAttribute="trailing" id="B3e-ya-cse"/>
+                        <constraint firstItem="Rql-Os-yE2" firstAttribute="leading" secondItem="2NK-cH-pwW" secondAttribute="leading" id="Fnl-gr-TVQ"/>
+                        <constraint firstAttribute="bottom" secondItem="R9n-v7-kAd" secondAttribute="bottom" constant="11" id="MmR-cT-AsR"/>
+                        <constraint firstAttribute="bottom" secondItem="Rql-Os-yE2" secondAttribute="bottom" id="Q9X-sD-BeD"/>
+                        <constraint firstItem="R9n-v7-kAd" firstAttribute="top" secondItem="2NK-cH-pwW" secondAttribute="top" id="deA-k6-Zax"/>
+                        <constraint firstItem="R9n-v7-kAd" firstAttribute="leading" secondItem="2NK-cH-pwW" secondAttribute="leading" constant="11" id="p3O-QB-GuU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="2NK-cH-pwW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="A8x-KF-D3q"/>
+                <constraint firstAttribute="trailing" secondItem="2NK-cH-pwW" secondAttribute="trailing" id="QhD-re-flc"/>
+                <constraint firstItem="2NK-cH-pwW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uke-Me-LzW"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="59.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestResultViewController" customModule="proveng" customModuleProvider="target">
+            <connections>
+                <outlet property="levelTextLabel" destination="e2o-em-2LF" id="vbE-i8-Dvs"/>
+                <outlet property="markTextLabel" destination="vVu-cr-Cai" id="Dr1-xD-Nep"/>
+                <outlet property="thanksButton" destination="SZE-YK-qO7" id="KRs-Z5-8TC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="B9Y-kb-O3T"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JwY-jl-Vkl">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="level" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2o-em-2LF">
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="19w-wH-vhg"/>
+                                <constraint firstAttribute="width" constant="354" id="e62-dU-PI3"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mark" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVu-cr-Cai">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="354" id="3O1-tQ-bIY"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="cHi-Cg-pKv"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="e2o-em-2LF" firstAttribute="centerX" secondItem="JwY-jl-Vkl" secondAttribute="centerX" id="IwR-V1-bIk"/>
+                        <constraint firstItem="vVu-cr-Cai" firstAttribute="centerY" secondItem="JwY-jl-Vkl" secondAttribute="centerY" constant="26" id="Sgh-g2-mIi"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="vAG-io-L8s"/>
+                        <constraint firstItem="e2o-em-2LF" firstAttribute="centerY" secondItem="JwY-jl-Vkl" secondAttribute="centerY" constant="-25" id="vyQ-4D-xB3"/>
+                        <constraint firstItem="vVu-cr-Cai" firstAttribute="centerX" secondItem="e2o-em-2LF" secondAttribute="centerX" id="wYg-ze-IIa"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_result" translatesAutoresizingMaskIntoConstraints="NO" id="2CF-VI-f4E">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="236" id="akC-8U-zVf"/>
+                        <constraint firstAttribute="width" constant="236" id="qho-wd-n4l"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZE-YK-qO7" customClass="BaseButton" customModule="proveng" customModuleProvider="target">
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="VNe-jh-Uka"/>
+                        <constraint firstAttribute="width" constant="290" id="l30-Q6-K5H"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleColor" red="0.94901960780000005" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="thanksButtonPressed:" destination="-1" eventType="touchUpInside" id="1sk-kX-whg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JwY-jl-Vkl" firstAttribute="top" secondItem="2CF-VI-f4E" secondAttribute="bottom" constant="8" id="1K4-fq-RIm"/>
+                <constraint firstItem="SZE-YK-qO7" firstAttribute="top" secondItem="JwY-jl-Vkl" secondAttribute="bottom" constant="8" id="9ci-L0-L10"/>
+                <constraint firstItem="SZE-YK-qO7" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="10:23" id="NC3-tL-12b"/>
+                <constraint firstItem="2CF-VI-f4E" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="PdE-vV-BK5"/>
+                <constraint firstItem="JwY-jl-Vkl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="cXD-PU-zc9"/>
+                <constraint firstItem="SZE-YK-qO7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cXz-uM-cxf"/>
+                <constraint firstAttribute="trailing" secondItem="JwY-jl-Vkl" secondAttribute="trailing" constant="16" id="nPZ-Rd-R6k"/>
+                <constraint firstItem="2CF-VI-f4E" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="noF-Vu-NTU"/>
+                <constraint firstAttribute="bottom" secondItem="SZE-YK-qO7" secondAttribute="bottom" constant="27" id="u4d-RU-um9"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="33.5" y="105.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="test_result" width="236" height="236"/>
+    </resources>
+</document>

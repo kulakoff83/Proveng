@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestQuestionsViewController" customModule="proveng" customModuleProvider="target">
+            <connections>
+                <outlet property="answerView" destination="jHT-3r-b0c" id="oHc-8E-XTx"/>
+                <outlet property="bottomAnwerViewConstraint" destination="2Zt-85-AgJ" id="gmm-ZW-rE7"/>
+                <outlet property="questionLabel" destination="iev-d9-t9P" id="jWu-EA-hb4"/>
+                <outlet property="topAnswerViewConstraint" destination="1bz-Lk-0Ub" id="SCQ-Wo-rlg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15. He is ______a Jacket" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iev-d9-t9P">
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Axs-RO-AWE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jHT-3r-b0c">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="472" id="Rv9-cn-RxB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jHT-3r-b0c" firstAttribute="top" secondItem="iev-d9-t9P" secondAttribute="bottom" constant="10" id="1bz-Lk-0Ub"/>
+                <constraint firstAttribute="bottom" secondItem="jHT-3r-b0c" secondAttribute="bottom" constant="130" id="2Zt-85-AgJ"/>
+                <constraint firstItem="jHT-3r-b0c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9b4-ph-BfH"/>
+                <constraint firstItem="iev-d9-t9P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="CP0-Gp-iLp"/>
+                <constraint firstAttribute="trailing" secondItem="jHT-3r-b0c" secondAttribute="trailing" id="DpD-vi-nVb"/>
+                <constraint firstItem="iev-d9-t9P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="GXn-an-gkT"/>
+                <constraint firstAttribute="trailing" secondItem="iev-d9-t9P" secondAttribute="trailing" constant="8" id="zjG-DS-zBS"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <point key="canvasLocation" x="33.5" y="58.5"/>
+        </view>
+    </objects>
+</document>
